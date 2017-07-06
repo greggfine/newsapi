@@ -1,0 +1,22 @@
+<%include partials/header  %>
+
+
+
+
+<h1> <%= data["source"].toUpperCase(); %>  </h1>
+
+
+<% data["articles"].forEach(function(article){  %>
+	<ul>
+		<li><strong><%= article["title"] %> </strong></li>
+		<li class="bullet"><i><%= article["author"] %> </i></li>
+		<li class="bullet"><%= article["description"] %> </li>
+		<a href="<%= article["url"] %>" target="_blank"><li class="bullet">Go to story </li></a> <br>
+	</ul>
+<%  })  %>
+
+<a href="/search"><button class="btn btn-primary">Search</button></a>
+
+
+
+<%include partials/footer  %>
